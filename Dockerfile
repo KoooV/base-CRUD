@@ -2,7 +2,7 @@ FROM gradle:8.5-jdk21 AS build
 
 WORKDIR /app
 
-COPY build.gradle settings.gradle ./
+COPY build.gradle.kts settings.gradle.kts ./
 COPY gradle ./gradle
 
 RUN gradle dependencies --no-daemon || true
